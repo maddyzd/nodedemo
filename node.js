@@ -7,10 +7,7 @@ const connStr = "mongodb+srv://mdumon:mydb123@cluster0.rvujnyd.mongodb.net/?retr
 console.log("This goes to the console window");
 
 http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write("<h2>Hello World</h2>");
-    res.write("Success! This app is deployed online");
-    res.end();
+    console.log(`Received request for path: ${req.url}`);
 }).listen(port, () => {
     console.log(`Server running on port ${port}`);
   
